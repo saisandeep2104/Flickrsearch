@@ -217,11 +217,37 @@
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
+    [self.indicator startAnimating];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSLog(@"Start");
+        //Do EXTREME PROCESSING!!!
+        for (int i = 0; i< 250; i++) {
+            [NSThread sleepForTimeInterval:.05];
+           // NSLog(@"%i", i);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // [self updateProgressBar:i];
+            });
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self backgroundDone];
+        });
+    });
+
+    
     [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
+        
         if(results && [results count] > 0)
         {
             if(![self.searches containsObject:searchTerm])
             {
+                
+                
+                
+                
+                
+                
                 NSLog(@"searching for photos");
 
                 NSLog(@"Found %d photos matching %@",[results count],searchTerm);
@@ -240,6 +266,12 @@
     
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)backgroundDone {
+    NSLog(@"Done");
+    [self.indicator stopAnimating];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 }
 
 #pragma mark - Segue

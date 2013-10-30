@@ -58,6 +58,10 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="InJ-CN-mCx">
+                                <rect key="frame" x="374" y="492" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hF-Af-fkT">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items>
@@ -182,23 +186,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="InJ-CN-mCx" firstAttribute="centerX" secondItem="3hF-Af-fkT" secondAttribute="centerX" type="default" id="DtS-zu-JAI"/>
                             <constraint firstItem="vEL-YA-XuC" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="EGw-H4-hof"/>
+                            <constraint firstItem="InJ-CN-mCx" firstAttribute="centerX" secondItem="9K9-gn-lyI" secondAttribute="centerX" type="default" id="EYc-wZ-jsn"/>
                             <constraint firstItem="4UO-Zp-VMX" firstAttribute="leading" secondItem="Xrw-sO-WOz" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="M4T-R6-G5m"/>
                             <constraint firstItem="3hF-Af-fkT" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="QXL-aK-qzk"/>
                             <constraint firstItem="9K9-gn-lyI" firstAttribute="top" secondItem="Xrw-sO-WOz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ub0-yy-HNT"/>
                             <constraint firstItem="vEL-YA-XuC" firstAttribute="top" secondItem="9K9-gn-lyI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Vky-1k-ary"/>
+                            <constraint firstItem="InJ-CN-mCx" firstAttribute="centerX" secondItem="vEL-YA-XuC" secondAttribute="centerX" type="default" id="WJf-L6-yn8"/>
                             <constraint firstItem="3hF-Af-fkT" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="XzW-y9-Q2a"/>
+                            <constraint firstItem="InJ-CN-mCx" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="default" id="cRx-ec-jyg"/>
                             <constraint firstItem="9K9-gn-lyI" firstAttribute="top" secondItem="4UO-Zp-VMX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jge-zg-448"/>
                             <constraint firstAttribute="trailing" secondItem="9K9-gn-lyI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kfi-Yq-cDt"/>
                             <constraint firstItem="9K9-gn-lyI" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mWT-iY-MCn"/>
-                            <constraint firstItem="3hF-Af-fkT" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="ngo-c8-u27"/>
                             <constraint firstItem="vEL-YA-XuC" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="rXd-Io-ir6"/>
-                            <constraint firstItem="vEL-YA-XuC" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="tT9-6D-dfZ"/>
                             <constraint firstItem="Xrw-sO-WOz" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="211" id="wp2-UM-vv7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="vEL-YA-XuC" id="2VT-Kt-1W7"/>
+                        <outlet property="indicator" destination="InJ-CN-mCx" id="ABO-HX-MSM"/>
                         <outlet property="shareButton" destination="kdY-gz-hXx" id="7pE-ld-GZO"/>
                         <outlet property="textField" destination="4UO-Zp-VMX" id="zRL-1a-Q22"/>
                         <outlet property="toolbar" destination="3hF-Af-fkT" id="iUd-rn-cAF"/>
