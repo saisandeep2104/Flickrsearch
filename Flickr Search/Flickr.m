@@ -9,14 +9,14 @@
 #import "Flickr.h"
 #import "FlickrPhoto.h"
 
-#define kFlickrAPIKey @"d02c877c0a4220890f14fc95f8b16983"
+#define kFlickrAPIKey @"d06d45ee849b300e92fa85342ec484ca"
 
 @implementation Flickr
 
 + (NSString *)flickrSearchURLForSearchTerm:(NSString *) searchTerm
 {
     searchTerm = [searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey,searchTerm];
+    return [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&per_page=40&format=json&nojsoncallback=1",kFlickrAPIKey,searchTerm];
 }
 
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size
