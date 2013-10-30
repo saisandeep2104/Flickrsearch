@@ -140,93 +140,28 @@
     retval.height += 135;
     retval.width += 135;
     return retval;
-    
- /*   if(indexPath.row == 0){
-        return CGSizeMake(110, 100);
-    }
-    else if (indexPath.row ==1){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==2){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==3){
-        return CGSizeMake(100, 100);
-        
-    }
-    else if (indexPath.row ==4){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==5){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==6){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==7){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==8){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==9){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==10){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==11){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==12){
-        return CGSizeMake(100, 100);
-        
-    }
-    else if (indexPath.row ==13){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==14){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==15){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==16){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==17){
-        return CGSizeMake(100, 100);
-    }
-    else if (indexPath.row ==18){
-        return CGSizeMake(100, 100);
-    }
-    else  {
-        return CGSizeMake(100, 100);
-    }
-    
-  */
+
 
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(50, 20, 50, 20);
+    return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
 #pragma mark - UITextFieldDelegate methods
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
+    //self.indicator.frame = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/2,100,100);
     [self.indicator startAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSLog(@"Start");
-        //Do EXTREME PROCESSING!!!
+        NSLog(@"Activity Indicator Start");
         for (int i = 0; i< 250; i++) {
             [NSThread sleepForTimeInterval:.05];
-           // NSLog(@"%i", i);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // [self updateProgressBar:i];
+           dispatch_async(dispatch_get_main_queue(), ^{
+               
             });
         }
         
@@ -269,7 +204,7 @@
 }
 
 - (void)backgroundDone {
-    NSLog(@"Done");
+    NSLog(@"Activity Indicator Done");
     [self.indicator stopAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 }

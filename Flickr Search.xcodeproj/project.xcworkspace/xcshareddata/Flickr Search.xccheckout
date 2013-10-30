@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F50A760F-B160-48F6-AEF7-8B70ADCD8AC4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Flickr Search</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3D3F03BA-91B7-4EE3-8981-5C767C514810</key>
+		<string>https://github.com/saisandeep2104/Flickrsearch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Flickr Search/Flickr Search.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3D3F03BA-91B7-4EE3-8981-5C767C514810</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/saisandeep2104/Flickrsearch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3D3F03BA-91B7-4EE3-8981-5C767C514810</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3D3F03BA-91B7-4EE3-8981-5C767C514810</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Flickrsearch</string>
+		</dict>
+	</array>
+</dict>
+</plist>
