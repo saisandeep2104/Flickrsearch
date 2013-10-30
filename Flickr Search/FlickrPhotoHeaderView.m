@@ -2,8 +2,8 @@
 //  FlickrPhotoHeaderView.m
 //  Flickr Search
 //
-//  Created by Brandon Trebitowski on 7/12/12.
-//  Copyright (c) 2012 Brandon Trebitowski. All rights reserved.
+//  Created by WPPA on 21/10/13.
+//  Copyright (c) 2013 WPPA. All rights reserved.
 //
 
 #import "FlickrPhotoHeaderView.h"

@@ -2,8 +2,8 @@
 //  ViewController.m
 //  Flickr Search
 //
-//  Created by Brandon Trebitowski on 7/10/12.
-//  Copyright (c) 2012 Brandon Trebitowski. All rights reserved.
+//  Created by WPPA on 21/10/13.
+//  Copyright (c) 2013 WPPA. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -137,9 +137,75 @@
     NSString *searchTerm = self.searches[indexPath.section];
     FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
     CGSize retval = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
-    retval.height += 35;
-    retval.width += 35;
+    retval.height += 135;
+    retval.width += 135;
     return retval;
+    
+ /*   if(indexPath.row == 0){
+        return CGSizeMake(110, 100);
+    }
+    else if (indexPath.row ==1){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==2){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==3){
+        return CGSizeMake(100, 100);
+        
+    }
+    else if (indexPath.row ==4){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==5){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==6){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==7){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==8){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==9){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==10){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==11){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==12){
+        return CGSizeMake(100, 100);
+        
+    }
+    else if (indexPath.row ==13){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==14){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==15){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==16){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==17){
+        return CGSizeMake(100, 100);
+    }
+    else if (indexPath.row ==18){
+        return CGSizeMake(100, 100);
+    }
+    else  {
+        return CGSizeMake(100, 100);
+    }
+    
+  */
+
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -156,9 +222,11 @@
         {
             if(![self.searches containsObject:searchTerm])
             {
+                NSLog(@"searching for photos");
+
                 NSLog(@"Found %d photos matching %@",[results count],searchTerm);
                 [self.searches insertObject:searchTerm atIndex:0];
-                self.searchResults[searchTerm] = results;
+                                self.searchResults[searchTerm] = results;
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
