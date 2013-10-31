@@ -118,7 +118,6 @@
         NSString *searchTerm = self.searches[indexPath.section];
         FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
         [self.selectedPhotos addObject:photo];
-        
     }
     
 }
@@ -192,6 +191,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
                 NSLog(@"Found %d photos matching %@",[results count],searchTerm);
                 [self.searches insertObject:searchTerm atIndex:0];
                                 self.searchResults[searchTerm] = results;
+
             }
             
         
@@ -280,7 +280,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
         [mailer setMessageBody:emailBody isHTML:YES];
         
         [self presentViewController:mailer animated:YES completion:^{}];
-        
+    
     }
     else
     {
