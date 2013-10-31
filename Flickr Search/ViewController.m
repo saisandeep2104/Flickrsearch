@@ -34,7 +34,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cork.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood.jpg"]];
     UIImage *navBarImage = [[UIImage
                              imageNamed:@"navbar.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(27, 27, 27, 27)];
@@ -47,7 +47,7 @@
     
     UIImage *textFieldImage = [[UIImage
                                 imageNamed:@"search_field.png"]
-                               resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+                               resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
     
@@ -59,6 +59,7 @@
     self.selectedPhotos = [@[] mutableCopy];
     
     [self.collectionView setBackgroundColor:[UIColor clearColor]];
+    
 
 }
 
@@ -146,7 +147,7 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(10, 5, 10, 5);
 }
 
 #pragma mark - UITextFieldDelegate methods
@@ -177,12 +178,6 @@
         {
             if(![self.searches containsObject:searchTerm])
             {
-                
-                
-                
-                
-                
-                
                 NSLog(@"searching for photos");
 
                 NSLog(@"Found %d photos matching %@",[results count],searchTerm);

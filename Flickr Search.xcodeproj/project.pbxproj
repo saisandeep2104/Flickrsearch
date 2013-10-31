@@ -41,6 +41,7 @@
 		C792197015AD22D600733509 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = C792196E15AD22D600733509 /* FlickrPhoto.m */; };
 		C7E178DC15AFCD3C005C3472 /* FlickrPhotoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E178DB15AFCD3C005C3472 /* FlickrPhotoHeaderView.m */; };
 		C7E6B19D15AE71F2005BF978 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E6B19C15AE71F2005BF978 /* FlickrPhotoCell.m */; };
+		CB5D69DD1821E7FE00F5F20B /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB5D69DC1821E7FE00F5F20B /* wood.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		C7E178DB15AFCD3C005C3472 /* FlickrPhotoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoHeaderView.m; sourceTree = "<group>"; };
 		C7E6B19B15AE71F2005BF978 /* FlickrPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
 		C7E6B19C15AE71F2005BF978 /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
+		CB5D69DC1821E7FE00F5F20B /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wood.jpg; path = ../../../Desktop/wood.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		C792191515AD163A00733509 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CB5D69DC1821E7FE00F5F20B /* wood.jpg */,
 				C792193E15AD167B00733509 /* bg_cork.png */,
 				C792193F15AD167B00733509 /* bg_cork@2x.png */,
 				C792194015AD167B00733509 /* button.png */,
@@ -270,6 +273,7 @@
 				C792195B15AD167B00733509 /* navbar@2x.png in Resources */,
 				C792195C15AD167B00733509 /* polaroid1_border.png in Resources */,
 				C792195D15AD167B00733509 /* polaroid1_border@2x.png in Resources */,
+				CB5D69DD1821E7FE00F5F20B /* wood.jpg in Resources */,
 				C792195E15AD167B00733509 /* search_field.png in Resources */,
 				C792195F15AD167B00733509 /* search_field@2x.png in Resources */,
 				C792196015AD167B00733509 /* search_text.png in Resources */,
@@ -372,6 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flickr Search/Flickr Search-Prefix.pch";
 				INFOPLIST_FILE = "Flickr Search/Flickr Search-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,6 +388,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flickr Search/Flickr Search-Prefix.pch";
 				INFOPLIST_FILE = "Flickr Search/Flickr Search-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
