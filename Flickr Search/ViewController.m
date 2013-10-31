@@ -91,7 +91,6 @@
     FlickrPhotoCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
     NSString *searchTerm = self.searches[indexPath.section];
     cell.photo = self.searchResults[searchTerm][indexPath.row];
-    
     return cell;
 }
 
@@ -119,6 +118,7 @@
         NSString *searchTerm = self.searches[indexPath.section];
         FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
         [self.selectedPhotos addObject:photo];
+        
     }
     
 }
@@ -137,13 +137,22 @@
 {
     NSString *searchTerm = self.searches[indexPath.section];
     FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
-    CGSize retval = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
-    retval.height += 135;
-    retval.width += 135;
-    return retval;
-
-
+    CGSize size = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
+    size.height += 15;
+    size.width += 15;
+    return size;
 }
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout*)collectionViewLayout
+minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    return (3);
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout*)collectionViewLayout
+minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    return (3);
+}
+
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -159,7 +168,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSLog(@"Activity Indicator Start");
-        for (int i = 0; i< 250; i++) {
+        for (int i = 0; i< 300; i++) {
             [NSThread sleepForTimeInterval:.05];
            dispatch_async(dispatch_get_main_queue(), ^{
                
@@ -185,6 +194,7 @@
                                 self.searchResults[searchTerm] = results;
             }
             
+        
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
             });
